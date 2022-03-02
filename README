@@ -1,9 +1,12 @@
 This is a docker build that is adapted from lysol/op25-docker
 
-It uses debian:bullseye instead of ubuntu:18.04 because ubuntu is bloat,
-and the boatbod build of op25 instead of osmocom, because boatbod is somewhat actively developed.
-But, we don't use the boatbod install.sh because it sucks, we already install the prereqs and know
-we're using gnuradio 3.8.
+It uses debian:bullseye and the boatbod build of op25
+
+Build:
+docker-compose build
+
+Run:
+./run.sh
 
 See run.sh for an example for how to run. You'll need to supply your own trunk.tsv and
 talkgroups tsv, of course.  You can follow the instructions on this page for doing so:
@@ -12,4 +15,10 @@ https://www.hagensieker.com/wordpress/2018/07/17/op25-for-dummies/
 By default in the compose file, /dev/snd is provided to the container, so you can get
 audio out of it. I haven't quite figured out how to get the audio into pulseaudio
 (for easy streaming with OBS etc), but pacat may be an option for that with the UDP
-audio option from rx.py, which is the default entrypoint for this image.
+audio option from rx.py
+
+Connecting audio:
+the option --udp-player in op25.sh now works
+
+GUI:
+Open a browser and go to http://localhost:8765

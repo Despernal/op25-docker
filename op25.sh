@@ -9,6 +9,7 @@
     --verbosity 1 \
     --phase2-tdma \
     --vocoder \
+    --udp-player \
     --wireshark \
     --wireshark-host=localhost \
     --wireshark-port=4455 \
