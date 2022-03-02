@@ -2,6 +2,8 @@ This is a docker build that is adapted from lysol/op25-docker
 
 It uses debian:bullseye instead of ubuntu:18.04 because ubuntu is bloat,
 and the boatbod build of op25 instead of osmocom, because boatbod is somewhat actively developed.
+But, we don't use the boatbod install.sh because it sucks, we already install the prereqs and know
+we're using gnuradio 3.8.
 
 See run.sh for an example for how to run. You'll need to supply your own trunk.tsv and
 talkgroups tsv, of course.  You can follow the instructions on this page for doing so:
