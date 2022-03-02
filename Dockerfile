@@ -15,5 +15,7 @@ RUN apt-get build-dep -y gnuradio
 RUN git clone https://github.com/boatbod/op25 && cd /op25 && mkdir build \
     && echo "/usr/bin/python3" > op25/gr-op25_repeater/apps/op25_python \
     && cd build && cmake ../ && make && make install && ldconfig
+RUN ln -s /usr/bin/python3 /usr/bin/python
 COPY ./config/ /op25/op25/gr-op25_repeater/apps/
 COPY ./rx.sh /rx.sh
+COPY ./op25.sh /op25/op25/gr-op25_repeater/apps/op25.sh
