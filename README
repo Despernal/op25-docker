@@ -18,7 +18,9 @@ audio out of it. I haven't quite figured out how to get the audio into pulseaudi
 audio option from rx.py
 
 Connecting audio:
-the option --udp-player in op25.sh now works
+the option --udp-player in op25.sh now works, provided the docker container is run in privileged mode
 
 GUI:
 Open a browser and go to http://localhost:8765
+
+Using rx.py vs multi_rx.py:

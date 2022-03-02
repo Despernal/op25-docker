@@ -1,2 +1,2 @@
 "sysname"	"control_channel_list"	"offset"	"nac"	"modulation"	"tgid_tags_file"	"whitelist"	"blacklist"	"center_frequency"
-"P25 SYSTEM"	"774.53125"	"0"	"0"	"cqpsk"	"marcs.tsv"	""	""	""
+"Cuya Co MARCS P25"	"774.53125"	"0"	"0"	"cqpsk"	"marcs.tsv"	""	""	""
