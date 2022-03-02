@@ -1,2 +1,2 @@
-Sysname	Control Channel List	Offset	NAC	Modulation	TGID Tags File	Whitelist	Blacklist	Center Frequency
-Henn County E	852.3625		0x40f	C4FM	hennw.tsv			
+"sysname"	"control_channel_list"	"offset"	"nac"	"modulation"	"tgid_tags_file"	"whitelist"	"blacklist"	"center_frequency"
+"P25 SYSTEM"	"774.78125"	"0"	"0"	"cqpsk"	"marcs.tsv"	""	""	""

@@ -1,6 +1,7 @@
-Here's a docker build that _should_ be a little more stable than the standard method
-of building op25. Use docker-compose to build and run. It's Linux only as MacOS doesn't
-include the same capabilities to supply access to USB devices to containers.
+This is a docker build that is adapted from lysol/op25-docker
+
+It uses debian:bullseye instead of ubuntu:18.04 because ubuntu is bloat,
+and the boatbod build of op25 instead of osmocom, because boatbod is somewhat actively developed.
 
 See run.sh for an example for how to run. You'll need to supply your own trunk.tsv and
 talkgroups tsv, of course.  You can follow the instructions on this page for doing so:
