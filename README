@@ -4,6 +4,9 @@ It uses debian:bullseye and the boatbod build of op25
 
 Configure:
 modify config/trunk.tsv and add your own tagfile
+modify rx.sh as needed:
+    To use a curses console in the docker container, change --terminal-type=curses
+    To run headless, change -it to -d
 
 Build:
 docker build -t op25-docker .
@@ -15,14 +18,8 @@ See run.sh for an example for how to run. You'll need to supply your own trunk.t
 talkgroups tsv, of course.  You can follow the instructions on this page for doing so:
 https://www.hagensieker.com/wordpress/2018/07/17/op25-for-dummies/
 
-By default in the compose file, /dev/snd is provided to the container, so you can get
-audio out of it. I haven't quite figured out how to get the audio into pulseaudio
-(for easy streaming with OBS etc), but pacat may be an option for that with the UDP
-audio option from rx.py
-
 Connecting audio:
-the option --udp-player in op25.sh now works, provided the docker container is run in privileged mode
-this will break pipewire, if it does, restart it with systemctl --user restart pipewire
+Requires pulseaudio on the host system until I figure out UDP/streaming.
 
 GUI:
 Open a browser and go to http://localhost:8765
