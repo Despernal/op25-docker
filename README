@@ -5,8 +5,7 @@ It uses debian:bullseye and the boatbod build of op25
 Configure:
 modify config/trunk.tsv and add your own tagfile
 modify rx.sh as needed:
-    To use a curses console in the docker container, change --terminal-type=curses
-    To run headless, change -it to -d
+    For example, for a text console in the docker container, change --terminal-type=curses and change -d to -it
 
 Build:
 docker build -t op25-docker .
