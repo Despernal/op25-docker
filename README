@@ -2,6 +2,9 @@ This is a docker build that is adapted from lysol/op25-docker
 
 It uses debian:bullseye and the boatbod build of op25
 
+Configure:
+modify config/trunk.tsv and add your own tagfile
+
 Build:
 docker build -t op25-docker .
 
