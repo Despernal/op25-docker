@@ -1,6 +1,4 @@
-This is a docker build that is adapted from lysol/op25-docker
-
-It uses debian:bullseye and the boatbod build of op25
+Do you have an RTL-SDR dongle and want to do P25 scanning, but you're running a newer operating system that no longer provides gnuradio 3.8? This solution uses docker to provide a working instance of op25.
 
 Configure:
 modify config/trunk.tsv and add your own tagfile
