@@ -19,6 +19,7 @@ audio option from rx.py
 
 Connecting audio:
 the option --udp-player in op25.sh now works, provided the docker container is run in privileged mode
+this will break pipewire, if it does, restart it with systemctl --user restart pipewire
 
 GUI:
 Open a browser and go to http://localhost:8765

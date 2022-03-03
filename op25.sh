@@ -1,6 +1,7 @@
 #!/bin/sh
 ./rx.py \
     --nocrypt \
+    --crypt-behavior=2 \
     --args "rtl" \
     --gains 'lna:41' \
     --sample-rate 1960000  \
