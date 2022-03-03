@@ -18,4 +18,4 @@ RUN git clone https://github.com/boatbod/op25 && cd /op25 && mkdir build \
 RUN ln -s /usr/bin/python3 /usr/bin/python
 COPY ./config/ /op25/op25/gr-op25_repeater/apps/
 COPY ./rx.sh /rx.sh
-COPY ./op25.sh /op25/op25/gr-op25_repeater/apps/op25.sh
+ENTRYPOINT /rx.sh
