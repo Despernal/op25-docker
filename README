@@ -3,7 +3,7 @@ This is a docker build that is adapted from lysol/op25-docker
 It uses debian:bullseye and the boatbod build of op25
 
 Build:
-docker-compose build
+docker build -t op25-docker .
 
 Run:
 ./run.sh
@@ -23,5 +23,3 @@ this will break pipewire, if it does, restart it with systemctl --user restart p
 
 GUI:
 Open a browser and go to http://localhost:8765
-
-Using rx.py vs multi_rx.py:
