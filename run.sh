@@ -1,7 +1,9 @@
-# example of docker-ompose-less invocation of dockerized op25
-sudo docker run -it --privileged \
+# example of docker-compose-less invocation of dockerized op25
+# make sure IMAGE matches what you used in docker build -t $IMAGE .
+IMAGE=op25-docker
+docker run --rm -d --privileged \
   -v /dev/bus/usb:/dev/bus/usb \
-  --device /dev/snd \
+  -v /run/user/${UID}/pulse/native:/run/user/1000/pulse/native \
   -p 8765:8765 \
-  --dns 8.8.8.8 op25:1.0 bash -c \
-  "cd /op25/op25/gr-op25_repeater/apps/ && python rx.py -S 960000 --args=\"rtl\" -N \"LNA:40\" -f \"852.3625e6\" -o 25000 -T trunk.tsv -V -U -w -2 -l 'http:*:8765'"
+  -p 23456:23456/udp \
+  $IMAGE

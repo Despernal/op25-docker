@@ -1,12 +1,22 @@
-Here's a docker build that _should_ be a little more stable than the standard method
-of building op25. Use docker-compose to build and run. It's Linux only as MacOS doesn't
-include the same capabilities to supply access to USB devices to containers.
+Do you have an RTL-SDR dongle and want to do P25 scanning, but you're running a newer operating system that no longer provides gnuradio 3.8? This solution uses docker to provide a working instance of op25.
+
+Configure:
+modify config/trunk.tsv and add your own tagfile
+modify rx.sh as needed:
+    For example, for a text console in the docker container, change --terminal-type=curses and change -d to -it
+
+Build:
+docker build -t op25-docker .
+
+Run:
+./run.sh
 
 See run.sh for an example for how to run. You'll need to supply your own trunk.tsv and
 talkgroups tsv, of course.  You can follow the instructions on this page for doing so:
 https://www.hagensieker.com/wordpress/2018/07/17/op25-for-dummies/
 
-By default in the compose file, /dev/snd is provided to the container, so you can get
-audio out of it. I haven't quite figured out how to get the audio into pulseaudio
-(for easy streaming with OBS etc), but pacat may be an option for that with the UDP
-audio option from rx.py, which is the default entrypoint for this image.
+Connecting audio:
+Requires pulseaudio on the host system until I figure out UDP/streaming.
+
+GUI:
+Open a browser and go to http://localhost:8765
